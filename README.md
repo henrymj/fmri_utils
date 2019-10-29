@@ -1,6 +1,6 @@
 
 
-# Dependencies
+## Dependencies
 
 Pydeface must be installed. Follow instructions here: https://github.com/poldracklab/pydeface
 
@@ -51,10 +51,7 @@ BIDS Data Format (e.g) http://bids.neuroimaging.io/
             |-- func
                 |-- sub-s001_task-rest_run-1_bold.nii.gz
 
-
-
-
-
+```
 
 
 
