@@ -1,4 +1,63 @@
 
+
+# Dependencies
+
+Pydeface must be installed. Follow instructions here: https://github.com/poldracklab/pydeface
+
+# FLY_to_BIDS Conversion
+
+## Summary
+
+Takes neuroimaging downloaded from flywheel data management system at Stanford Universtiy (cni.flywheel.io) and converts it to BIDS (http://bids.neuroimaging.io/)
+
+## Usage
+
+> python3 FLY_to_BIDS.py PATH/TO/FLY_dir PATH/TO/BIDS_dir
+
+This version of FLY_to_BIDS is intended to work through the command line on Sherlock. The script takes two arguments, the path to the FLY_data and the path where the BIDS data should be saved.
+
+
+```
+Flywheel Data Format (e.g)
+
+|-- project_data
+    |-- s999
+        |-- ses-1
+            |-- anat-T1w
+                |-- 16549_1_1.montage.zip
+                |-- 16549_1_1.nii.gz
+            |-- fmap_fieldmap
+                |-- 16549_2_1_fieldmap.json 
+                |-- 16549_2_1_fieldmap.nii.gz 
+                |-- 16549_2_1.json      
+                |-- 16549_2_1.nii.gz
+            |--task-stopSignal_run-1_ssg
+                |-- 16549_3_1.physio.geophysio.zip
+                |-- 16549_3_1.json
+                |-- 16549_3_1.nii.gz
+                       
+
+
+BIDS Data Format (e.g) http://bids.neuroimaging.io/
+
+
+|-- BIDS_data
+    |-- task-rest_bold.json
+    |-- dataset_description.json
+    |-- sub-s001
+        |-- ses-1
+            |-- anat
+                |-- sub-s001_T1w.nii.gz
+            |-- func
+                |-- sub-s001_task-rest_run-1_bold.nii.gz
+
+
+
+
+
+
+
+
 # NIMS\_to\_BIDS Conversion
 
 ## Summary
@@ -48,8 +107,5 @@ BIDS Data Format (e.g) http://bids.neuroimaging.io/
                 |-- sub-s001_task-rest_run-1_bold.nii.gz
 ```
 
-## Dependencies
-
-Pydeface must be installed. Follow instructions here: https://github.com/poldracklab/pydeface
 
 
